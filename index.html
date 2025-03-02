@@ -1,13 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>---表极客导航页---</title>
-        <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列,3系列,智能手表,表极客,智能手表之家,小天才" />
+    <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列,3系列,智能手表,表极客,智能手表之家,小天才" />
     <meta name="description" content="在表极客，我们为您提供的不仅仅是应用下载，更是一个集资源共享、知识交流和技术教学为一体的综合平台。无论您是寻找最新的应用程序，还是想了解实用的技巧与教程，表极客都能满足您的各种需求。" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        #countdown {
+            color: #ff6600;
+            font-weight: bold;
+        }
+    </style>
     <script>
         window.onload = function () {
             // 生成 1 到 11 之间的随机整数
@@ -15,16 +47,27 @@
             // 构建随机跳转的页面 URL
             const randomPage = `index${randomNum}.html`;
 
-            // 3 秒后进行页面跳转
-            setTimeout(() => {
-                window.location.href = randomPage;
-            }, 3000);
+            let seconds = 3;
+            const countdownElement = document.getElementById('countdown');
+
+            // 每秒更新倒计时显示
+            const countdownInterval = setInterval(() => {
+                countdownElement.textContent = seconds;
+                seconds--;
+                if (seconds < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = randomPage;
+                }
+            }, 1000);
         };
     </script>
 </head>
 
 <body>
-    <p>本页面将在 3 秒后跳转到表极客导航页</p>
+    <div class="container">
+        <h1>---表极客导航页---</h1>
+        <p>本页面将在 <span id="countdown">3</span> 秒后跳转到随机页面</p>
+    </div>
 </body>
 
 </html>
