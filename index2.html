@@ -2,25 +2,77 @@
 <head>
     <meta charset="UTF-8">
     <title>---正在前往表极客主站---</title>
-        <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列,3系列,智能手表,表极客,智能手表之家,小天才" />
+    <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列,3系列,智能手表,表极客,智能手表之家,小天才" />
     <meta name="description" content="在表极客，我们为您提供的不仅仅是应用下载，更是一个集资源共享、知识交流和技术教学为一体的综合平台。无论您是寻找最新的应用程序，还是想了解实用的技巧与教程，表极客都能满足您的各种需求。" />
     <meta http-equiv="refresh" content="3;url=https://app.leidell.cn/">
-<style>
-    .center-img {
-            text-align: center;
+    <style>
+        @font-face {
+            font-family: HarmonyOS_Sans_SC_Medium;
+            font-style: normal;
+            font-display: swap;
+            src: url('https://cdn.jsdmirror.com/gh/leidellstudio/cssrjs/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
+                 url('https://cdn.jsdmirror.com/gh/leidellstudio/cssrjs/HarmonyOS_Sans_SC_Medium.woff') format('woff');
         }
- @font-face {
-         font-family:HarmonyOS_Sans_SC_Medium;font-style: normal;font-display: swap;
-         src: url('https://cdn.jsdmirror.com/gh/leidellstudio/cssrjs/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
-         url('https://cdn.jsdmirror.com/gh/leidellstudio/cssrjs/HarmonyOS_Sans_SC_Medium.woff') format('woff');
-      }
-         *{font-family:HarmonyOS_Sans_SC_Medium;}
-</style>
+
+        * {
+            font-family: HarmonyOS_Sans_SC_Medium;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            animation: gradient 5s infinite alternate;
+        }
+
+        @keyframes gradient {
+            0% {
+                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            }
+        }
+
+        .center-img {
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .center-img img {
+            width: 200px;
+            height: auto;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
-</div>
+<body>
     <div class="center-img">
         <img src="https://cdn.leidell.cn/watchgeekload.gif" alt="表极客logo">
-</div>
-<body>
+    </div>
 </body>
 </html>
