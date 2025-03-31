@@ -5,39 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>---表极客导航页---</title>
-    <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列,3系列,智能手表,表极客,智能手表之家,小天才" />
-    <meta name="description" content="在表极客，我们为您提供的不仅仅是应用下载，更是一个集资源共享、知识交流和技术教学为一体的综合平台。无论您是寻找最新的应用程序，还是想了解实用的技巧与教程，表极客都能满足您的各种需求。" />
+    <meta name="keywords" content="华为儿童手表,小米手表,biaojike,huawei,手表社区,手表,破解,应用下载站,应用分享,网页版,手表应用,应用大全,v2签名,4x,3s,4系列应用">
+    <meta name="description" content="在表极客，我们为您提供的不仅仅是应用下载，更是一个集资源共享、知识交流和技术教学为一体的综合平台。无论您是技术小白还是资深玩家，都能在这里找到适合自己的内容。">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
+            animation: gradient 5s infinite alternate;
+        }
+
+        @keyframes gradient {
+            0% {
+                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            }
         }
 
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transform: scale(1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 
         h1 {
             color: #333;
+            margin: 0 0 10px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         p {
             color: #666;
             font-size: 18px;
+            margin: 0;
+            animation: fadeIn 2s 1s both;
         }
 
         #countdown {
             color: #ff6600;
             font-weight: bold;
+            font-size: 24px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
         }
     </style>
     <script>
